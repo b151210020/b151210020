@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<title>Siteme Hoş Geldiniz!</title>
+	<style type="text/css">
+		body {margin: 0; padding: 0;}
+		#kayit_formu {padding: 10px;width: 500px;
+			margin: 50px auto;background: #ddd;border-radius: 5px;}
+			input {padding: 10px;border: 1px solid #ccc;border-radius: 3px;}
+			#button {background-color: #fa3636;cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="Hakkında.html">Hakkında</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="Şehrim.html">Şehrim<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="Mirasımız.html">Mirasımız</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="Özgeçmiş.html">Özgeçmiş</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="Login.html">Login</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="İletişim.html">İletişim</a>
+					</li>      
+				</ul>
+			</div>
+		</nav>
+		<form >
+			<div id="kayit_formu">
+				<form action="?" method="POST">
+					<table>
+						<tr>
+							<td>Kullanıcı Adı:</td><td><input type="text" name="kadi"></td>
+						</tr>
+						<tr>
+							<td>Şifre:</td><td><input type="password" name="pass"></td>
+						</tr>
+						<tr>
+							<td></td><td><input type="submit" id="button" value="Kayıt ol"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</form>
+		<?php
+			if($_POST){
+				$kadi =$_POST['kadi'];
+				$sifre =$_POST['pass'];
+
+				if($kadi == "" || $sifre == ""){
+					echo "Lütfen boş alan bırakmayın!"
+				}
+		}
+		
+
+
+
+		?>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+	</html>
